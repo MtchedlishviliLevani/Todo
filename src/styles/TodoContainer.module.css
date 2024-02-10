@@ -1,0 +1,126 @@
+.mainContainer {
+  padding: 0 27px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid 3px #20eeb0;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #20eeb0;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.inputtext {
+  height: 50px;
+  background: #ebeff2;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  min-width: 275px;
+  padding-left: 50px;
+}
+
+.inputtext::placeholder {
+  position: absolute;
+  left: 50px;
+  color: #888888;
+}
+
+.addbtn {
+  width: 88px;
+  height: 49px;
+  background-color: #20eeb0;
+  border: none;
+  color: white;
+  font-size: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.inputs_wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.inputs_wrapper label {
+  position: absolute;
+  left: 10px;
+  top: 29%;
+}
+
+.modify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.modify > .container {
+  top: -4px;
+}
+
+.down_part {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.planned_iems p {
+  font-size: 14px;
+}
